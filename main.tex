@@ -1,0 +1,219 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[pastel]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+%\usepackage[hidelinks]{hyperref}
+\hypersetup{hidelinks}
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{June 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Virgile}{Daugé}{PhD Student}{white}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \roundpic{virgile}
+\end{center}
+
+\bg{cvgreen}{white}{About me}\\[0.5em]
+
+{\footnotesize
+Jeune chercheur en robotique, je suis curieux et j'aime concevoir, construire. La réalisation de solutions complètes à des problèmatiques concrètes me permet de vivre pleinement ma recherche. J'affectione particulièrement l'enseignement, car il prépare l'avenir.}
+\bigskip
+
+\bigskip
+
+\bg{cvgreen}{white}{Domaines de prédilection} \\[0.5em]
+
+Robotique ~•~ Enseignement ~•~ IA
+
+\bigskip
+
+
+
+\bigskip
+
+
+\bg{cvgreen}{white}{Intérêts}\\[0.5em]
+
+\texttt{Jeux de plateau} ~/~ \texttt{ vidéos}
+
+\texttt{Théatre} ~/~ \texttt{zythologie}
+
+\texttt{Linux} ~/~ \texttt{Python} ~/~ \texttt{Org-mode}
+
+\vspace{4em}
+
+\infobubble{\faLinkedin}{cvgreen}{white}{virgiledauge}
+\infobubble{\faGithub}{cvgreen}{white}{virgiletn}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Curriculum}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2017--2021}{PhD}{LORIA/INRIA}{Nancy \color{cvred}}{Création et implémentation d'algorithmes novateurs pour l'exploration autonome d'environnements inconnus. Expérimentations pour validation des approches choisies dans un contexte réaliste.}{} \\
+    \cvevent{2013--2016}{Etudiant ingénieur}{Télécom}{Nancy \color{cvred}}{Spécialisation dans le logiciel embarqué, stages au Canada chez \textit{Parallel Geometry} ou j'ai travaillé sur la norme AMF pour l'impression 3D. Ainsi qu'à INRIA où j'ai réalisé un controlleur réactif pour hexapod.}{} \\
+    \cvevent{2011-2013}{DUT GEII}{IUT montet}{Nancy \color{cvred}}{Premiers pas dans la robotique, à travers des projets comme la réalisation d'un robot pour la coupe de france de robotique.}{} \\
+\end{tabular}
+\vspace{3em}
+
+%% \begin{minipage}[t]{0.35\textwidth}
+%% \section*{Degrees}
+%% \begin{tabular}{r p{0.6\textwidth} c}
+%%     \cvdegree{1710}{Captain}{Certified}{Tortuga Uni \color{headerblue}}{}{disney.png} \\
+%%     \cvdegree{1715}{Bucaneering}{M.A.}{London \color{headerblue}}{}{medal.jpeg} \\
+%%     \cvdegree{1720}{Bucaneering}{B.A.}{London \color{headerblue}}{}{medal.jpeg}
+%% \end{tabular}
+%% \end{minipage}
+
+
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Publications}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+    2019 & \emph{NAPS: a Nomadic and Accurate Positioning System}, Aerial Swarms | IROS 2019. \\
+\end{tabular}
+\bigskip
+
+\section*{Talks}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
+  2019 & ``NAPS paper presentation'', \emph{IROS} in Macao.
+\end{tabular}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
+  2018 & ``Robots en détresse ! '', \emph{Pint of science} in Nancy.
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Programming}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{Org-mode} &  \barrule{0.3}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{Python} & \barrule{0.55}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{ROS/ROS2} & \barrule{0.5}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{Robotics} & \barrule{0.4}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{Linux} & \barrule{0.5}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{c/c++} &  \barrule{0.2}{0.5em}{cvpurple}\\
+\end{tabular}
+\end{minipage}
+
+\section*{Enseignements}
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{64H}{Algorithmique et projets}{L2-L3}{DI FST Nancy \color{cvred}}{Principalement des cours d’algorithmique mais également du
+  suivi et évaluation de projets étudiants, avec comme langage support le C. Réalisation
+  d'un outil d'aide à la correction pour le TPs Notés de C. Ces
+  différents enseignements comprenaient des TD, TP, TP Notés,
+  surveillances et corrections d'examens.}{} \\
+    \cvevent{96H}{Principes fondamentaux des systèmes informatiques}{L3}{Télécom Nancy \color{cvred}}{Accompagnement des étudiants dans la
+  compréhension des Principes fondamentaux des systèmes informatiques
+  en partant de l'algèbre de Boole pour arriver à de la programmation
+  en assembleur (RISK simplifié). Comprenant des TD, TP, TP Notés,
+  préparation d'examen et corrections de copies.}{} \\
+    \cvevent{}{Encadrements projets et stages}{M1-M2}{LORIA \color{cvred}}{Initiation à la recherche et stages ingénieurs, proposition des sujets, suivi, évaluation.}{} \\
+\end{tabular}
+\vspace{2.5em}
+
+%% \begin{minipage}[t]{0.3\textwidth}
+%% \section*{Certificates \& Grants}
+%% \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+%%     1708 & Captain's Certificates \\
+%%     1710 & Travel grant \\
+%%     1715--1716 & Grant from the Pirate's Company
+%% \end{tabular}
+%% \bigskip
+
+%% \section*{Languages}
+%% \begin{tabular}{l | l}
+%% \textbf{French} & {\phantom{x}\footnotesize mother tongue} \\
+%% \textbf{English} & \pictofraction{\faCircle}{cvgreen}{4}{black!30}{1}{\tiny} \\
+%% \textbf{Spanish}  & \pictofraction{\faCircle}{cvgreen}{1}{black!30}{3}{\tiny} \\
+%% \textbf{Italian}  & \pictofraction{\faCircle}{cvgreen}{3}{black!30}{1}{\tiny}
+%% \end{tabular}
+%% \bigskip
+
+%% \end{minipage}\hfill
+%% \begin{minipage}[t]{0.3\textwidth}
+%% \section*{Publications}
+%% \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+%%     1729 & \emph{How I almost got killed by Lady Swan}, Tortuga Printing Press. \\
+%%     1720 & ``Privateering for Beginners'', in: \emph{The Pragmatic Pirate} (1/1720).
+%% \end{tabular}
+%% \bigskip
+
+%% \section*{Talks}
+%% \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
+%%   Nov. 1726 & ``Robots en détresse ! '', at: \emph{Pint of science} in Nancy.
+%% \end{tabular}
+%% \end{minipage}
+
+
+
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Virgile Daugé \icon{\faEnvelopeO}{cvgreen}{} 27 Rue Christian Pfister \icon{\faMapMarker}{cvgreen}{} Nancy \icon{\faPhone}{cvgreen}{} +33 6 99 09 02 29 \newline\icon{\faAt}{cvgreen}{} \href{mailto:virgile.dauge@loria.fr}{virgile.dauge@loria.fr}
+}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+\end{document}
